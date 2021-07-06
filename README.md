@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @marrowake
-- 👀 I’m interested in web development, system administrating and programming
+- 👀 I’m interested in web development, system administration and programming
 - 🌱 I’m currently learning HTML, CSS, JavaScript, Linux, Rust
 - 💞️ I’m looking to collaborate on (maybe later)
 - 📫 How to reach me: vk.com/marrowake, t.me/@marrowake
