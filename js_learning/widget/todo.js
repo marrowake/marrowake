@@ -3,22 +3,31 @@ const toDoForm = document.querySelector('.js-toDoForm'),
     toDoList = document.querySelector('.js-toDoList')
 
 const TODOES_LS = 'toDoes'
-const toDoesArr = []
-
-function foo(toDo) {
-    showToDoes(toDo.name)
-}
+let toDoesArr = []
 
 function loadToDoes() {
     const loaded_toDoes = localStorage.getItem(TODOES_LS)
     if (loaded_toDoes !== null) {
         const parsedToDoes = JSON.parse(loaded_toDoes)
-        parsedToDoes.forEach(foo)
+        parsedToDoes.forEach(function(toDo) {
+            showToDoes(toDo.name)
+        })
     }
 }
 
 function saveToDoes() {
     localStorage.setItem(TODOES_LS, JSON.stringify(toDoesArr)) //JSON.stringify converts objsect into a string
+}
+
+function deleteToDo(event) {
+    const btn = event.target
+    const li = btn.parentNode
+    toDoList.removeChild(li)
+    const cleanToDoes = toDoesArr.filter(function(toDo) {
+        return toDo.id !== parseInt(li.id)
+    })
+    toDoesArr = cleanToDoes
+    saveToDoes()
 }
 
 function showToDoes(text) {
@@ -27,6 +36,7 @@ function showToDoes(text) {
     const span = document.createElement('span')
     const newId = toDoesArr.length + 1
     delBtn.innerHTML = '&#10060'
+    delBtn.addEventListener('click', deleteToDo)
     span.innerText = text
     li.appendChild(delBtn)
     li.appendChild(span)
