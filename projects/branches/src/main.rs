@@ -35,12 +35,12 @@
 //     println!("Значение числа равно {}", number);
 // }
 
-// fn main() {
-//     let condition = true;
-//     let number = if condition {
-//         5
-//     } else {
-//         "six"
-//     };
-//     print!("Значение числа равно {}", number);
-// }
+fn main() {
+    let condition = true;
+    let number = if condition {
+        5
+    } else {
+        "six"
+    };
+    print!("Значение числа равно {}", number);
+}
