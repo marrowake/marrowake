@@ -54,11 +54,48 @@
 //     println!("Значение x равно {}", x);
 // }
 
-fn main() {
-    let x = plus_one(5);
-    println!("Значение x равно {}", x);
-}
+// fn main() {
+//     let x = plus_one(5);
+//     println!("Значение x равно {}", x);
+// }
 
-fn plus_one(x: i32) -> i32 {
-    x + 1
+// fn plus_one(x: i32) -> i32 {
+//     x + 1
+// }
+
+//Управление потоком (if, else)
+
+// fn main() {
+//     let number = 7;
+
+//     if number < 5 {
+//         println!("Condition was true")
+//     } else {
+//         println!("Condition was false")
+//     }
+// }
+
+// fn main() {
+//     let number = 6;
+
+//     if number % 4 == 0 {
+//         println!("Number divides by 4")
+//     } else if number % 3 == 0 {
+//         println!("Number divides by 3")
+//     } else if number % 2 == 0 {
+//         println!("Number divides by 2")
+//     } else {
+//         println!("Number doesn't divide by 4, 3 and 2")
+//     }
+// }
+
+fn main() {
+    let condition = true;
+    let number = if condition {
+        5
+    } else {
+        "six"
+    };
+
+    println!("The number is {}", number)
 }
